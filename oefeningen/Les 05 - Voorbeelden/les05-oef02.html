@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form{
+            width: 50%;
+        }
+        .schaduw{
+            box-shadow: 5px 5px;
+            border-radius: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="https://tm-statweb.be/forms.php" method="post"> 
+    <div>
+        <label for="Voornaam">Voornaam: </label>
+        <br>
+        <input class="schaduw" 
+        type="text"
+        id="Voornaam"
+        name="Voornaam"
+        placeholder="Stijn">
+    </div>
+    <div>
+        <label for="Familienaam">Familienaam: </label>
+        <br>
+        <input class="schaduw" 
+        type="text"
+        id="Familienaam"
+        name="Familienaam"
+        placeholder="Lenaerts">
+    </div>
+    <div>
+        <label for="mail">E-mail:  </label>
+        <br>
+        <input class="schaduw" 
+        type="email"
+        id="mail"
+        name="mail"
+        placeholder="mail@thomasmore.be">
+    </div>
+    <div>
+        <label for="nickname">nickname: </label>
+        <br>
+        <input class="schaduw" 
+        type="text"
+        id="nickname"
+        name="nickname"
+        required>
+    </div>
+    <div>
+        <label for="paswoord">paswoord: </label>
+        <br>
+        <input class="schaduw"
+        type="password"
+        id="paswoord"
+        name="paswoord"
+        required>
+    </div>
+    <div>
+        <label for="Herhaal paswoord">Herhaal paswoord: </label>
+        <br>
+        <input class="schaduw"
+        type="password"
+        id="Herhaal paswoord"
+        name="Herhaal paswoord"
+        required>
+    </div>
+    <div>
+        <input type="submit" value="registreren">
+    </div>
+</form>
+  
+
+
+</body>
+</html>
