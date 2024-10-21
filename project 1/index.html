@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepagina</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #202020;
+        color: white;
+      }
+/* Navigatie */
+      .site-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 50px;
+        background-color: #202020;
+      }
+
+      .logo {
+        margin-right: auto;
+      }
+
+      .main-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .nav-list {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-item {
+        margin-left: 30px;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        color: white;
+        font-size: 1.1rem;
+        position: relative;
+      }
+
+      .nav-link:hover,
+      .nav-link:focus {
+        color: #ff6200;
+      }
+
+      .nav-link:hover::after,
+      .nav-link:focus::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #ff6200;
+        left: 0;
+        bottom: -5px;
+
+/* Home */
+
+      }
+      .home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px 50px;
+      }
+
+      .home-text {
+        max-width: 50%;
+      }
+
+      .home-text h2 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+      }
+
+      .oranje-lijn {
+        width: 100px;
+        height: 2px;
+        background-color: #ff6200;
+        margin-bottom: 20px;
+      }
+
+      .home-text h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+        font-weight: bold;
+      }
+
+      .home-foto img {
+        width: 500px;
+        border-radius: 10px;
+      }
+      .beschrijving {
+        text-align: center;
+        padding: 40px 50px;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        color: #ffffff;
+      }
+
+      .beschrijving p {
+        margin: 0;
+        font-weight: 300;
+        color: #ffffff;
+      }
+
+/* Biografie */
+
+      .biografie-siebe {
+        display: flex;
+        padding: 50px;
+        background-color: #f5f5f5;
+      }
+
+      .links {
+        width: 70%;
+      }
+
+      .links img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .rechts {
+        width: 30%;
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .rechts {
+        background-color: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .biografie h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: #ff6200;
+      }
+
+      .biografie p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #202020;
+        text-align: justify;
+      }
+
+      .biografie hr {
+        width: 50px;
+        border: 2px solid #ff6200;
+        margin-bottom: 15px;
+      }
+
+/* footer */
+
+      .footer {
+        background-color: #202020;
+        color: #ffffff;
+        padding: 40px 20px;
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .footer-column {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer-column ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-column ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      .footer-column ul li a:hover {
+        text-decoration: underline #ff6200;
+      }
+
+      .footer-column p {
+        color: #ff6200;
+        font-size: 14px;
+        margin-top: 20px;
+      }
+
+      .footer-column .logo img {
+        width: 100px;
+        margin-top: 20px;
+      }
+
+      .footer-column a img {
+        width: 20px;
+        margin-right: 10px;
+      }
+
+      .footer-column ul li:last-child a {
+        color: #ff6200;
+        font-weight: normal;
+        text-transform: none;
+      }
+    </style>
+  </head>
+  <link rel="icon" href="/img/favicon.ico" type="image/gif" sizes="16x16" />
+  <body>
+    <header class="site-header">
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="/index.html" class="nav-link">Homepagina</a>
+          </li>
+          <li class="nav-item">
+            <a href="/cv.html" class="nav-link">Curriculum Vitae</a>
+          </li>
+          <li class="nav-item">
+            <a href="/Ervaring.html" class="nav-link">Ervaring</a>
+          </li>
+          <li class="nav-item">
+            <a href="/hobbys-interesses.html" class="nav-link"
+              >Hobby's/Interesses</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="/contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="home">
+      <div class="home-text">
+        <h2>Siebe Neuts</h2>
+        <hr class="oranje-lijn" />
+        <h1>
+          PROGRAMMEREN.<br />
+          REIZEN.<br />
+          SPORT.
+        </h1>
+      </div>
+      <div class="home-foto">
+        <img
+          src="/img/461523770_1087676149455139_5062541467745773225_n.jpg"
+          alt="foto homepagina"
+        />
+      </div>
+    </section>
+
+    <div class="beschrijving">
+      <p>
+        Een startende programmeur met veel ambitie en doorzettingsvermogen die
+        graag de wereld wilt ontdekken en een gepassioneerd sporter
+      </p>
+    </div>
+    <section class="biografie-siebe">
+      <div class="links">
+        <img
+          src="/img/460351330_1223597105522349_2063568570097474286_n.jpg"
+          alt="siebe biografie"
+        />
+      </div>
+      <div class="rechts">
+        <div class="biografie">
+          <h2>Biografie</h2>
+          <hr />
+          <p>
+            Mijn naam is Siebe Neuts en ik ben student aan Thomas More Geel,
+            waar ik de graduaatsopleiding Programmeren volg. Ik heb voor deze
+            opleiding gekozen omdat ik tijdens mijn korte ervaring als
+            after-sales assistent bij Hyundai Construction Equipment in
+            Tessenderlo merkte hoe belangrijk IT is in de bedrijfswereld.
+            Bovendien vind ik dit een waardevolle aanvulling op mijn CV, na het
+            behalen van mijn bachelor Bedrijfsmanagement, KMO & Ondernemen. Deze
+            twee factoren zijn mijn grootste drijfveren om me verder te
+            verdiepen in de IT-wereld.
+          </p>
+          <p>
+            Buiten school haal ik mijn energie uit sport en tijd doorbrengen met
+            mijn vriendin, Louise. Sinds mijn vierde ben ik een gepassioneerde
+            voetballer en ik speel momenteel bij K.F.C. Ham United. Daarnaast
+            ben ik regelmatig in de fitness te vinden en speel ik in het weekend
+            graag padel met vrienden. In mijn vrije tijd reis ik graag naar het
+            buitenland met familie of vrienden. Zij zouden me omschrijven als
+            een rustige, maar gedreven persoon die openstaat voor nieuwe
+            avonturen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <ul>
+            <li><a href="/index.html">Homepagina</a></li>
+            <li><a href="/cv.html">Curriculum Vitae</a></li>
+            <li><a href="/Ervaring.html">Ervaring</a></li>
+            <li><a href="/hobbys-interesses.html">Hobby's/interesses</a></li>
+            <li><a href=""></a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <ul>
+            <li><a href="/contact.html">Contact</a></li>
+            <li>
+              <a href="https://www.linkedin.com/in/siebe-neuts">linkedin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <p>© siebe Neuts 2024</p>
+      </div>
+    </footer>
+  </body>
+</html>

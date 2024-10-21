@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    
+    <style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: "Arial", sans-serif;
+background-color: #202020;
+color: white;
+}
+
+/* Navigatie */
+.site-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #202020;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #ff6200;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6200;
+    left: 0;
+    bottom: -5px;
+}
+
+/* Contact */
+
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    color: #FF6200; 
+    margin-bottom: 10px;
+}
+
+.email {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 10px;
+    border: 2px solid #FFFFFF; 
+    border-radius: 5px;
+    background-color: #202020; 
+    color: #FFFFFF; 
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #FF6200; 
+}
+
+button {
+    padding: 12px;
+    background-color: #FF6200; 
+    color: #FFFFFF; 
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FFFFFF; 
+    color: #202020; 
+}
+
+/* Footer */
+
+.footer {
+background-color: #202020;
+color: #ffffff;
+padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-column p {
+    color: #ff6200;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.footer-column .logo img {
+    width: 100px;
+    margin-top: 20px;
+}
+
+.footer-column a img {
+    width: 20px;
+    margin-right: 10px;
+}
+.footer-column ul li:last-child a {
+    color: #ff6200;
+    font-weight: normal;
+    text-transform: none;
+}
+.copyright{
+    margin: auto;
+}
+
+
+    </style>
+    
+
+</head>
+<link rel="icon" href="/img/favicon.ico" type="image/gif" sizes="16x16">
+<body>
+    <header class="site-header">
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="/index.html" class="nav-link">Homepagina</a></li>
+            <li class="nav-item"><a href="/cv.html" class="nav-link">Curriculum Vitae</a></li>
+            <li class="nav-item"><a href="/Ervaring.html" class="nav-link">Ervaring</a></li>
+            <li class="nav-item"><a href="/hobbys-interesses.html" class="nav-link">Hobby's/Interesses</a></li>
+            <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    <body>
+        <div class="contact-container">
+            <h1>GET IN TOUCH</h1>
+            <p>Let's work together!</p>
+            <p class="email">info@siebe-neuts.com</p>
+            <form action="#" class="contact-form">
+                <div class="form-group">
+                    <label for="name">naam *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Onderwerp</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                <div class="form-group">
+                    <label for="company">Bedrijf</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="message">Bericht</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Verzend bericht</button>
+            </form>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <ul>
+                    <li><a href="/index.html">Homepagina</a></li>
+                    <li><a href="/cv.html">Curriculum Vitae</a></li>
+                    <li><a href="/Ervaring.html">Ervaring</a></li>
+                    <li><a href="/hobbys-interesses.html">Hobby's/Interesses</a></li>
+                    <li><a href=""></a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li>
+                           
+                            <a href="https://www.linkedin.com/in/siebe-neuts">linkedin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <p>© siebe Neuts 2024</p>
+            </div>
+        </footer>
+        
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hobby's</title>
+
+    <style>
+     
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #202020;
+        color: white;
+      }
+/* navigatie */
+      .site-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 50px;
+        background-color: #202020;
+      }
+
+      .logo {
+        margin-right: auto;
+      }
+
+      .main-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .nav-list {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-item {
+        margin-left: 30px;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        color: white;
+        font-size: 1.1rem;
+        position: relative;
+      }
+
+      .nav-link:hover,
+      .nav-link:focus {
+        color: #ff6200;
+      }
+
+      .nav-link:hover::after,
+      .nav-link:focus::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #ff6200;
+        left: 0;
+        bottom: -5px;
+      }
+
+      /* Hobby */
+      .container-hobby {
+        display: flex;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: stretch;
+      }
+
+      .header {
+        width: 40%;
+        text-align: left;
+        background-color: #1d1d1d;
+        color: white;
+        padding: 20px;
+      }
+
+      .header h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: #ff6200;
+      }
+
+      .header h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: white;
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        color: #ddd;
+        margin-bottom: 15px;
+        text-align: justify;
+      }
+
+      .hobbies {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 60%;
+        justify-content: space-between;
+        background-color: #1d1d1d;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .hobby {
+        display: flex;
+        background-color: #fff;
+        color: #202020;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        height: 300px;
+      }
+
+      .hobby-image {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .hobby-info {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .hobby-info h2 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+      }
+
+      .hobby-info p {
+        font-size: 1rem;
+        color: #777;
+      }
+
+      .selected {
+        background-color: #ff6200;
+        color: #fff;
+      }
+
+      .selected .hobby-info h2,
+      .selected .hobby-info p {
+        color: #fff;
+      }
+
+      /* interesse */
+      .container-interesse {
+        text-align: center;
+        margin-top: 15px;
+        background-color: #ffffff;
+      }
+
+      h1 {
+        color: #ff6200;
+        margin-bottom: 20px;
+        margin-top: 40px;
+      }
+
+      .card {
+        background-color: #ffffff;
+        color: #202020;
+        border-radius: 10px;
+        width: 370px;
+        margin: 20px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .card img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .card h2 {
+        margin: 10px 0;
+        color: #ff6200;
+      }
+
+      .card p {
+        padding: 0 20px 20px 20px;
+        text-align: justify;
+      }
+
+      /* Footer */
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 15px;
+      }
+
+      .footer-column {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer-column ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-column ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      .footer-column ul li a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-column p {
+        color: #ff6200;
+        font-size: 14px;
+        margin-top: 20px;
+      }
+
+      .footer-column .logo img {
+        width: 100px;
+        margin-top: 20px;
+      }
+
+      .footer-column a img {
+        width: 20px;
+        margin-right: 10px;
+      }
+
+      .footer-column ul li:last-child a {
+        color: #ff6200;
+        font-weight: normal;
+        text-transform: none;
+      }
+    </style>
+  </head>
+  <link rel="icon" href="/img/favicon.ico" type="image/gif" sizes="16x16" />
+  <body>
+    <header class="site-header">
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="/index.html" class="nav-link">Homepagina</a>
+          </li>
+          <li class="nav-item">
+            <a href="/cv.html" class="nav-link">Curriculum Vitae</a>
+          </li>
+          <li class="nav-item">
+            <a href="/Ervaring.html" class="nav-link">Ervaring</a>
+          </li>
+          <li class="nav-item">
+            <a href="/hobbys-interesses.html" class="nav-link"
+              >Hobby's/Interesses</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="/contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container-hobby">
+      <div class="header">
+        <h1>Hobby's</h1>
+        <h2>Voetbal</h2>
+        <p>
+          Ik ben gepassioneerd door voetbal en speel al sinds mijn vierde jaar.
+          Sindsdien ben ik nooit gestopt met voetballen en het steunen van mijn
+          favoriete club. In de Belgische competitie ben ik een grote fan van
+          Royal Antwerp Football Club, en de afgelopen jaren heb ik als
+          supporter enkele geweldige seizoenen beleefd. Momenteel ben ik actief
+          bij mijn lokale club, K.F.C. Ham United, waar ik probeer een goed
+          seizoen te draaien en nog meer plezier uit de sport te halen. Het
+          competitiebeest in mij wil altijd winnen! Het aspect van teamspeler
+          zijn, speelt ook een grote rol in mijn leven. Dankzij deze sport ben
+          ik op professioneel vlak ook een echte teamspeler geworden. Ik werk
+          graag samen met mensen die op dezelfde golflengte zitten als ik. Soms
+          is dat niet het geval, maar ik ben altijd bereid om deze uitdaging aan
+          te gaan en er het beste van te maken.
+        </p>
+        <h2>Fitness</h2>
+        <p>
+          Ik ben hier een jaar geleden mee begonnen omdat ik niet tevreden was
+          met mijn lichaam en me elke dag wil blijven ontwikkelen, zowel mentaal
+          als fysiek. Je kunt me hier minstens vier keer per week terugvinden.
+          Voor mij is het ook een manier om stoom af te laten; het is nog leuker
+          als ik dit samen met mijn beste vrienden kan doen. Zo kunnen we
+          tijdens het trainen plezier maken en praten over belangrijke zaken.
+          Dit helpt me om mijn zelfbeeld te ontwikkelen en met meer
+          zelfvertrouwen door het leven te gaan.
+        </p>
+        <h2>Padel</h2>
+        <p>
+          Padel beoefen ik minder frequent dan de andere twee sporten. Ik speel
+          meestal in het weekend met vrienden, wanneer er een gaatje in de
+          agenda is. Het vereist niet veel inspanning, maar blijft toch
+          competitief. Na een potje padel drink ik graag een pintje met mijn
+          vrienden en geniet ik van een welverdiend weekend.
+        </p>
+      </div>
+
+      <div class="hobbies">
+        <div class="hobby">
+          <img src="/img/VOETBAL.jpg" alt="Voetbal" class="hobby-image" />
+          <div class="hobby-info">
+            <h2>Voetbal</h2>
+            <p>K.F.C. Ham United</p>
+          </div>
+        </div>
+        <div class="hobby selected">
+          <img src="/img/FITNESS.jpg" alt="Fitness" class="hobby-image" />
+          <div class="hobby-info">
+            <h2>Fitness</h2>
+            <p>Basic-Fit Tessenderlo</p>
+          </div>
+        </div>
+        <div class="hobby">
+          <img src="/img/PADEL.jpg" alt="Padel" class="hobby-image" />
+          <div class="hobby-info">
+            <h2>Padel</h2>
+            <p>G.T. Tessenderlo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-interesse">
+      <h1>Interesses</h1>
+      <div class="card">
+        <img src="/img/VAKANTIE.jpg" alt="Vakantie" />
+        <h2>Reizen</h2>
+        <p>
+          Ik houd ervan om op vakantie te gaan met vrienden of familie. Het
+          biedt de kans om andere culturen, eetgewoonten en natuur te ontdekken.
+          Mijn doel is om later zoveel mogelijk landen te bezoeken, zodat ik
+          geen spijt heb van de stappen die ik niet heb ondernomen. Ik ben
+          iemand die graag herinneringen voor het leven maakt, en wat is een
+          betere gelegenheid dan op vakantie? Hier kan ik echt tot rust komen en
+          een groot deel van mijn gedachten op pauze zetten.
+        </p>
+      </div>
+      <div class="card">
+        <img src="/img/FEEST.jpg" alt="Op stap gaan met vrienden" />
+        <h2>Op stap gaan met vrienden</h2>
+        <p>
+          Vrienden zijn het belangrijkste in mijn leven en hebben een grote
+          invloed gehad op de persoon die ik nu ben. Ze zijn er altijd voor me,
+          zowel in goede als in slechte tijden, en hebben me door moeilijke
+          situaties heen geholpen. Ik ben er zeker van dat ik zonder hen mijn
+          bachelor diploma niet zou hebben gehaald. Daarom ben ik ontzettend
+          dankbaar en zal ik nooit iets tegen mijn zin in doen met hen.
+        </p>
+      </div>
+      <div class="card">
+        <img src="/img/MUZIEK.jpg" alt="Muziek" />
+        <h2>Muziek</h2>
+        <p>
+          Naast het sporten ben ik een grote muziekliefhebber, met rap en
+          hip-hop als mijn favoriete muziekstijlen. Als je me met oortjes ziet
+          rondlopen of samen met mij in de auto zit, kun je er bijna zeker van
+          zijn dat deze muziek op staat. Voor mij is het een manier om de
+          realiteit te ontvluchten, en ik kan er echt van genieten. Ik gebruik
+          deze muziek voor verschillende doeleinden: ter voorbereiding op een
+          voetbalwedstrijd, om stress te verminderen, of om mezelf te troosten
+          als ik verdrietig ben. Ik zou het dus geen enkele dag willen missen.
+        </p>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <ul>
+            <li><a href="/index.html">Homepagina</a></li>
+            <li><a href="/cv.html">Curriculum Vitae</a></li>
+            <li><a href="/Ervaring.html">Ervaring</a></li>
+            <li><a href="/hobbys-interesses.html">Hobby's/Interesses</a></li>
+            <li><a href=""></a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <ul>
+            <li><a href="/contact.html">Contact</a></li>
+            <li>
+              <a href="https://www.linkedin.com/in/siebe-neuts">linkedin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <p>© siebe Neuts 2024</p>
+      </div>
+    </footer>
+  </body>
+</html>
